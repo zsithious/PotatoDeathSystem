@@ -1,0 +1,138 @@
+# PotatoDeathSystem Messages
+# Author: zSithious
+# Version: 1.0.0
+
+# Death coordinate message sent after respawn
+death-coordinates: "&7You died at &e{x}&7, &e{y}&7, &e{z} &7in &e{world}"
+
+# Custom death messages by cause
+# A random message is selected from each list
+# {player} = dead player, {killer} = killer name (if applicable)
+death-messages:
+  ENTITY_ATTACK:
+    - "&e{player} &7was slain by &c{killer}"
+    - "&e{player} &7got destroyed by &c{killer}"
+    - "&e{player} &7was no match for &c{killer}"
+    - "&e{player} &7was eliminated by &c{killer}"
+    - "&e{player} &7fell to &c{killer}"
+  ENTITY_SWEEP_ATTACK:
+    - "&e{player} &7was swept away by &c{killer}"
+    - "&e{player} &7was cut down by &c{killer}"
+  PROJECTILE:
+    - "&e{player} &7was shot by &c{killer}"
+    - "&e{player} &7was sniped by &c{killer}"
+    - "&e{player} &7took an arrow from &c{killer}"
+  FALL:
+    - "&e{player} &7fell from a high place"
+    - "&e{player} &7tried to fly but forgot wings"
+    - "&e{player} &7hit the ground too hard"
+    - "&e{player} &7discovered gravity"
+  LAVA:
+    - "&e{player} &7tried swimming in lava"
+    - "&e{player} &7discovered lava is not a hot tub"
+    - "&e{player} &7melted away"
+  FIRE:
+    - "&e{player} &7burned to death"
+    - "&e{player} &7went up in flames"
+  FIRE_TICK:
+    - "&e{player} &7burned to a crisp"
+    - "&e{player} &7couldn't stop the fire"
+  DROWNING:
+    - "&e{player} &7forgot to breathe"
+    - "&e{player} &7drowned"
+    - "&e{player} &7slept with the fish"
+  VOID:
+    - "&e{player} &7fell into the void"
+    - "&e{player} &7was consumed by the void"
+    - "&e{player} &7fell out of the world"
+  BLOCK_EXPLOSION:
+    - "&e{player} &7was blown to bits"
+    - "&e{player} &7tried to hug a creeper"
+  ENTITY_EXPLOSION:
+    - "&e{player} &7was blown up by &c{killer}"
+    - "&e{player} &7exploded thanks to &c{killer}"
+  SUFFOCATION:
+    - "&e{player} &7suffocated in a wall"
+    - "&e{player} &7was squished"
+  STARVATION:
+    - "&e{player} &7starved to death"
+    - "&e{player} &7forgot to eat"
+  POISON:
+    - "&e{player} &7was poisoned"
+    - "&e{player} &7drank the wrong potion"
+  WITHER:
+    - "&e{player} &7withered away"
+  MAGIC:
+    - "&e{player} &7was killed by magic"
+    - "&e{player} &7was hit by a spell"
+  LIGHTNING:
+    - "&e{player} &7was struck by lightning"
+    - "&e{player} &7was smited by the gods"
+  THORNS:
+    - "&e{player} &7was pricked to death"
+    - "&e{player} &7was killed by thorns"
+  CRAMMING:
+    - "&e{player} &7was squished by too many entities"
+  FLY_INTO_WALL:
+    - "&e{player} &7experienced kinetic energy"
+    - "&e{player} &7flew into a wall"
+  FREEZE:
+    - "&e{player} &7froze to death"
+    - "&e{player} &7turned into an ice cube"
+  SONIC_BOOM:
+    - "&e{player} &7was obliterated by a sonic boom"
+  CONTACT:
+    - "&e{player} &7was pricked to death by a cactus"
+    - "&e{player} &7hugged a cactus"
+  DEFAULT:
+    - "&e{player} &7died"
+    - "&e{player} &7perished"
+    - "&e{player} &7met their end"
+
+# Gravestone messages
+gravestone:
+  spawned: "&7A gravestone has been placed at your death location."
+  recovered: "&aYou recovered your items from the gravestone!"
+  recovered-other: "&aYou recovered &e{player}&a's items from the gravestone."
+  expired: "&cYour gravestone has expired! Items were dropped on the ground."
+  expired-lost: "&cYour gravestone has expired and items were lost."
+  no-permission: "&cYou cannot recover this gravestone!"
+  empty: "&cThis gravestone is empty."
+
+# Keep inventory message
+keepinventory-active: "&aYour inventory was preserved."
+
+# Command messages
+command:
+  reload-success: "&aConfiguration reloaded successfully!"
+  no-permission: "&cYou do not have permission to use this command!"
+  player-not-found: "&cPlayer not found!"
+  no-deaths: "&7No death records found."
+  no-deaths-other: "&7No death records found for &e{player}&7."
+
+  history-header: "&6&l Death History{for_player}"
+  history-entry: "  &7{index}. &e{cause} &7at &e{x}&7, &e{y}&7, &e{z} &7({world}) &8- &7{time}"
+  history-entry-pvp: "  &7{index}. &cKilled by {killer} &7at &e{x}&7, &e{y}&7, &e{z} &7({world}) &8- &7{time}"
+
+  top-header: "&6&l Death Leaderboard"
+  top-entry: "  &e{rank}. &f{player} &8- &c{count} deaths"
+
+  help: |
+    &6&lPotatoDeathSystem Commands:
+    &7/death &8- &fShow your death history
+    &7/death history [player] &8- &fView death history
+    &7/death top &8- &fDeath leaderboard
+    &7/death reload &8- &fReload configuration
+    &7/death help &8- &fShow this help menu
+
+# Placeholders:
+# {player} - Player name
+# {killer} - Killer name
+# {cause} - Death cause
+# {world} - World name
+# {x}, {y}, {z} - Death coordinates
+# {time} - Time of death
+# {count} - Death count
+# {rank} - Leaderboard rank
+# {index} - History entry index
+# {for_player} - " for PlayerName" or empty string

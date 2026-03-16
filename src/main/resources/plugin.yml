@@ -1,0 +1,49 @@
+name: PotatoDeathSystem
+version: 1.0.0
+main: com.potatoesnw.PotatoDeathSystem.PotatoDeathSystem
+api-version: 1.21
+author: zSithious
+description: Advanced death system with custom messages, gravestones, and death history
+
+folia-supported: false
+load: POSTWORLD
+
+commands:
+  death:
+    description: Death system commands
+    aliases: [pds, deaths]
+    usage: /<command> [history|top|reload|help]
+    permission: deathsystem.history
+
+permissions:
+  deathsystem.admin:
+    description: Access to all death system commands
+    default: op
+    children:
+      deathsystem.history: true
+      deathsystem.history.others: true
+      deathsystem.top: true
+      deathsystem.gravestone: true
+      deathsystem.gravestone.others: true
+      deathsystem.reload: true
+  deathsystem.keepinv:
+    description: Keep inventory on death
+    default: false
+  deathsystem.history:
+    description: View own death history
+    default: true
+  deathsystem.history.others:
+    description: View other players death history
+    default: op
+  deathsystem.top:
+    description: View death leaderboard
+    default: true
+  deathsystem.gravestone:
+    description: Recover own gravestone items
+    default: true
+  deathsystem.gravestone.others:
+    description: Recover other players gravestones
+    default: op
+  deathsystem.reload:
+    description: Reload plugin configuration
+    default: op

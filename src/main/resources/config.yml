@@ -1,0 +1,54 @@
+# PotatoDeathSystem Configuration
+# Author: zSithious
+# Version: 1.0.0
+
+# Death Settings
+death:
+  # Enable custom death messages
+  custom-messages: true
+
+  # Show death coordinates to the player
+  show-coordinates: true
+
+  # Delay in seconds after respawn before showing death coordinates
+  coordinate-delay: 3
+
+# Keep Inventory Settings
+keepinventory:
+  # Enable permission-based keep inventory (deathsystem.keepinv)
+  enabled: true
+
+# Gravestone Settings
+gravestone:
+  # Enable gravestone system
+  enabled: true
+
+  # Duration in seconds before gravestone despawns
+  duration: 300
+
+  # Drop items on the ground when gravestone expires
+  drop-items-on-expire: true
+
+  # Show floating name text above gravestone
+  hologram: true
+
+# Death Log Settings
+log:
+  # Maximum number of deaths to keep per player
+  max-history: 20
+
+  # Auto-save interval in seconds (0 to disable periodic saves)
+  save-interval: 300
+
+# Plugin Settings
+settings:
+  # Enable debug mode for detailed logging
+  debug-mode: false
+
+  # bStats Metrics
+  metrics: true
+
+# Message Settings
+messages:
+  # Prefix for all plugin messages
+  prefix: "&4&lDeath &8»&f "
